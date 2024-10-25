@@ -1,0 +1,84 @@
+/* # Fichier pour les styles personnalisés */
+
+/* section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  } */
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bg-site {
+  --bs-bg-opacity: 1;
+  background-color: rgb(2, 146, 66) !important;
+}
+.bg-second-site {
+  --bs-bg-opacity: 1;
+  background-color: rgb(223 243 229) !important;
+}
+
+.btn-site {
+    color: white !important;
+    background: rgb(2, 146, 66) !important;
+  };
+
+.text-site {
+    color: rgb(2, 146, 66) !important;
+  };
+
+  .hero-section {
+    position: relative;
+    height: 100vh; /* Hauteur de la section */
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Couleur noire avec 60% d'opacité */
+    z-index: 1; /* Assure que l'overlay est au-dessus de l'image */
+}
+
+.hero-section #hero-text {
+    position: relative; /* Pour que le texte soit au-dessus de l'overlay */
+    z-index: 2; /* Positionne le texte au-dessus de l'overlay */
+    padding: 20px; /* Ajoute un peu d'espace autour du texte */
+}
+
+
+.m-top {
+  margin-top: 5%;
+}
+/* Boutons flottants */
+.btn-floating {
+  position: fixed;
+  right: 20px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn-to-top {
+  bottom: 100px;
+}
+
+#btn-whatsapp {
+  bottom: 40px;
+}
+
+.btn-floating i {
+  font-size: 24px;
+  color: white;
+}

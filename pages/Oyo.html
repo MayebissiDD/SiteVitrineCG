@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Site Congo - Oyo</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Site Congo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+          </li>
+          <!-- Dropdown for Cities -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Villes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Brazzaville.html">Brazzaville</a></li>
+              <li><a class="dropdown-item" href="PointeNoire.html">Pointe-Noire</a></li>
+              <li><a class="dropdown-item" href="Oyo.html">Oyo</a></li>
+              <li><a class="dropdown-item" href="#">Dolisie</a></li>
+              <li><a class="dropdown-item" href="#">Autres</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header de la ville -->
+  <header class="container-fluid p-5 text-center text-white" style="background: url('/assets/images/oyo-banner.jpg') no-repeat center center; background-size: cover; animation: fadeIn 1.5s ease-in-out;">
+    <h1 class="display-4">Oyo</h1>
+    <p>Une ville importante du nord du Congo</p>
+  </header>
+
+  <!-- Section Historique -->
+  <section class="container mt-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 animate__animated animate__fadeInLeft">
+        <h2>Histoire d'Oyo</h2>
+        <p>Oyo est une ville du nord du Congo, située au bord du fleuve Alima. Bien que relativement petite, Oyo a pris de l'importance en raison de sa proximité avec la résidence du président et son rôle croissant dans la vie politique et économique du pays.</p>
+        <p>Connue pour son atmosphère tranquille, la ville s'est récemment développée en tant que centre administratif et d'affaires.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="/assets/images/oyo.jpg" alt="Oyo" class="img-fluid rounded shadow-lg animate__animated animate__fadeInRight">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Culture -->
+  <section class="container mt-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-md-2 animate__animated animate__fadeInRight">
+        <h2>La culture d'Oyo</h2>
+        <p>Oyo se distingue par sa tranquillité et son cadre naturel. La ville est entourée de forêts et de rivières, offrant aux visiteurs un aperçu de la beauté naturelle du Congo. Oyo est également un lieu de culture où des événements traditionnels et musicaux sont organisés régulièrement.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <img src="/assets/images/culture-oyo.jpg" alt="Culture d'Oyo" class="img-fluid rounded shadow-lg animate__animated animate__fadeInLeft">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Lieux d’intérêt -->
+  <section class="container mt-5">
+    <h2 class="text-center mb-5">Lieux d’intérêt</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm animate__animated animate__fadeInUp">
+          <img src="/assets/images/fleuve-alima.jpg" class="card-img-top" alt="Fleuve Alima">
+          <div class="card-body">
+            <h5 class="card-title">Le Fleuve Alima</h5>
+            <p class="card-text">Le fleuve Alima traverse Oyo et offre des opportunités pour des balades en pirogue et des excursions en pleine nature.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm animate__animated animate__fadeInUp animate__delay-1s">
+          <img src="/assets/images/palais-presidentiel.jpg" class="card-img-top" alt="Palais Présidentiel d'Oyo">
+          <div class="card-body">
+            <h5 class="card-title">Palais Présidentiel</h5>
+            <p class="card-text">Résidence officielle du président, ce palais est un site important à Oyo et témoigne du rôle central de la ville dans la vie politique du Congo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm animate__animated animate__fadeInUp animate__delay-2s">
+          <img src="/assets/images/centre-medical.jpg" class="card-img-top" alt="Centre Médical d'Oyo">
+          <div class="card-body">
+            <h5 class="card-title">Centre Médical</h5>
+            <p class="card-text">Un des établissements médicaux modernes du Congo, le Centre Médical d'Oyo est un symbole de la modernisation de la ville.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galerie d'images -->
+  <section class="container mt-5">
+    <h2 class="text-center mb-5">Galerie d'images</h2>
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/assets/images/oyo1.jpg" class="d-block w-100" alt="Oyo 1">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/images/oyo2.jpg" class="d-block w-100" alt="Oyo 2">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/images/oyo3.jpg" class="d-block w-100" alt="Oyo 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-success text-white pt-5 pb-3">
+    <div class="container">
+      <p class="text-center">&copy; 2024 Mon Site Congo - Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Boutons flottants -->
+  <a href="#" class="btn btn-success btn-lg btn-floating rounded-circle" id="btn-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <a href="https://wa.me/242061234567" class="btn btn-success btn-lg btn-floating rounded-circle" id="btn-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Bootstrap JS + Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="/js/main.js"></script>
+
+</body>
+
+</html>

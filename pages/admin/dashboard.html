@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Bord</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Style personnalisé -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand, .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    .navbar-brand:hover, .navbar-nav .nav-link:hover {
+      color: #ffc107;
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary {
+      background-color: #343a40;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #ffc107;
+      color: #343a40;
+    }
+
+    .btn-danger:hover {
+      background-color: #dc3545;
+    }
+
+    h5 {
+      color: #343a40;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Mon Site Congo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <button id="logoutButton" class="btn btn-danger">Déconnexion</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenu du tableau de bord -->
+  <div class="container mt-5">
+    <h2 class="mb-4">Bienvenue, <span id="userName">Utilisateur</span></h2>
+
+    <div class="row">
+      <!-- Informations Personnelles -->
+      <div class="col-md-6 mb-4">
+        <div class="card p-4">
+          <div class="d-flex align-items-center">
+            <img id="profilePic" src="/images/default-profile.png" class="rounded-circle me-3" alt="Image de profil" style="width: 100px;">
+            <div>
+              <h5 id="userFullName">Nom : John Doe</h5>
+              <p id="userEmail">Email : john@example.com</p>
+              <button id="editProfileButton" class="btn btn-primary"><i class="fa fa-pencil-alt me-2"></i>Modifier le profil</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Autres Actions -->
+      <div class="col-md-6 mb-4">
+        <div class="card p-4">
+          <h5>Autres Actions</h5>
+          <button class="btn btn-warning mb-3"><i class="fa fa-lock me-2"></i>Changer le mot de passe</button>
+          <button class="btn btn-danger" id="deleteAccountButton"><i class="fa fa-trash me-2"></i>Supprimer le compte</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 Mon Site Congo. Tous droits réservés.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Fichier JS personnalisé -->
+  <script src="/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Récupérer les informations de l'utilisateur depuis localStorage (simulation)
+      const userName = localStorage.getItem("userName") || "John Doe";
+      const userEmail = localStorage.getItem("userEmail") || "john@example.com";
+
+      // Mettre à jour le DOM avec les informations de l'utilisateur
+      document.getElementById("userName").textContent = userName;
+      document.getElementById("userFullName").textContent = `Nom : ${userName}`;
+      document.getElementById("userEmail").textContent = `Email : ${userEmail}`;
+
+      // Gestion de la déconnexion
+      document.getElementById("logoutButton").addEventListener("click", function() {
+        localStorage.removeItem("isLoggedIn");
+        alert("Déconnecté avec succès.");
+        window.location.href = '/pages/login.html'; // Rediriger vers la page de connexion
+      });
+
+      // Gestion de la suppression de compte (simulation)
+      document.getElementById("deleteAccountButton").addEventListener("click", function() {
+        if (confirm("Êtes-vous sûr de vouloir supprimer votre compte ?")) {
+          localStorage.clear(); // Supprimer toutes les données utilisateur
+          alert("Compte supprimé avec succès.");
+          window.location.href = '/pages/signup.html'; // Rediriger vers la page d'inscription
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
